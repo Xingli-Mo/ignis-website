@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGNIS Strategic Advisory | 炳烨咨询</title>
+    <style>
+        :root {
+            --primary-red: #960018;
+            --sidebar-width: 30px;
+        }
+
+        body {
+            font-family: "Georgia", "Times New Roman", "PingFang SC", "Microsoft YaHei", serif;
+            margin: 0; padding: 0;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            border-right: var(--sidebar-width) solid var(--primary-red);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        /* 顶部工具栏 */
+        .top-utility {
+            padding: 15px 10% 15px 5%;
+            display: flex; justify-content: flex-end; align-items: center;
+            gap: 25px; border-bottom: 1px solid #f0f0f0; font-size: 0.95rem;
+        }
+        .top-utility a { text-decoration: none; color: var(--primary-red); font-weight: bold; }
+        .lang-switch { cursor: pointer; border: 1px solid var(--primary-red); padding: 3px 12px; color: var(--primary-red); font-weight: bold; }
+
+        header { padding: 40px 5%; }
+        .logo img { height: 75px; }
+
+        /* 👑 首页核心口号区域 (Hero Section) */
+        .hero-section {
+            padding: 60px 10% 80px 5%;
+            background: linear-gradient(to right, #ffffff, #fcfcfc);
+        }
+        .hero-section h1 {
+            font-size: 2.8rem;
+            line-height: 1.3;
+            margin-bottom: 25px;
+            color: #000;
+            border-left: 10px solid var(--primary-red);
+            padding-left: 30px;
+            max-width: 1000px;
+        }
+        .hero-section .sub-slogan {
+            font-size: 1.6rem;
+            color: var(--primary-red);
+            font-weight: bold;
+            padding-left: 40px;
+            letter-spacing: 1px;
+        }
+
+        /* 左右分栏通用布局 */
+        .section-split {
+            display: flex;
+            padding: 80px 10% 80px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            border-top: 1px solid #eee;
+        }
+        .left-col { width: 30%; font-size: 2.2rem; font-weight: bold; color: #333; }
+        .right-col { width: 70%; font-size: 1.1rem; color: #444; text-align: justify; }
+
+        .service-block { margin-bottom: 60px; }
+        .service-block h3 { font-size: 1.6rem; color: var(--primary-red); margin-bottom: 20px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+
+        .industry-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; list-style: none; padding: 0; margin: 20px 0; font-weight: bold; }
+        .industry-list li::before { content: "▪ "; color: var(--primary-red); }
+
+        .summary-box { background: #f9f9f9; padding: 40px; border-left: 5px solid var(--primary-red); margin-top: 40px; }
+
+        .lang-en { display: none; }
+
+        footer { padding: 60px 5%; background: #1a1a1a; color: #fff; margin-right: -30px; }
+
+        @media (max-width: 1024px) {
+            .section-split { flex-direction: column; }
+            .left-col, .right-col { width: 100%; }
+            .hero-section h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-utility">
+        <span class="lang-switch" onclick="toggleLanguage()">中文 / English</span>
+        <a href="mailto:info@ignisstrategicadvisory.com">info@ignisstrategicadvisory.com</a>
+        <a href="https://www.linkedin.com/company/ignis-strategic-advisory/" target="_blank">LinkedIn</a>
+    </div>
+
+    <header>
+        <div class="logo"><img src="images/logo.png" alt="IGNIS Logo"></div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="lang-zh">
+                <h1>立足加拿大，护航中国企业全球化：<br>专业风险管理、合规出海注册与政府关系战略支持</h1>
+                <p class="sub-slogan">加国本土化护航，化解跨境风险，赋能合规出海</p>
+            </div>
+            <div class="lang-en">
+                <h1>Rooted in Canada, Safeguarding Chinese Enterprises' Globalization:<br>Risk Management, Compliance & Strategic GR Support</h1>
+                <p class="sub-slogan">Localized Canadian Support, Mitigating Risks, Empowering Compliance</p>
+            </div>
+        </section>
+
+        <div class="section-split" id="services">
+            <div class="left-col">
+                <span class="lang-zh">经营范围</span><span class="lang-en">Services</span>
+            </div>
+            <div class="right-col">
+                <div class="service-block">
+                    <h3><span class="lang-zh">企业出海全链护航</span><span class="lang-en">End-to-End Market Access</span></h3>
+                    <p class="lang-zh">从海外公司注册、知识产权确权到财税外包与实体邮件代管，我们提供合规落地的全流程解决方案。依托加拿大本土化服务网络，助您快速搭建海外经营实体，规避法律盲区，确保业务无缝衔接目标市场，专注核心战略拓展。</p>
+                </div>
+
+                <div class="service-block">
+                    <h3><span class="lang-zh">政府关系战略服务</span><span class="lang-en">Government Relations</span></h3>
+                    <div class="lang-zh">
+                        <p>我们协助企业建立与加拿大联邦、省、市三级政府的有效沟通桥梁：通过政策趋势分析与企业诉求整合，制定务实倡导策略，在合规范围内优化政企互动；针对政府资金申请，提供从项目匹配、申报材料优化到流程管理的全周期支持，提升企业获取补助的成功率。</p>
+                        <p>同时，我们策划并执行政策倡导日（Advocacy Days）——通过会晤议程定制、决策者简报汇编、模拟对话培训及现场协调支持，协助企业高效对接关键政府部门，精准传递核心业务诉求。结合实时立法监测与政策风向预判，我们为企业构建动态风险预警机制，降低突发性法规变动对运营的冲击，同步开展声誉评估加固政企信任纽带。</p>
+                    </div>
+                </div>
+
+                <div class="service-block">
+                    <h3><span class="lang-zh">服务行业</span><span class="lang-en">Industries</span></h3>
+                    <ul class="industry-list lang-zh">
+                        <li>跨境贸易企业</li><li>大宗商品交易商</li><li>医药健康机构</li><li>食品制造厂商</li><li>电商</li>
+                    </ul>
+                </div>
+
+                <div class="summary-box">
+                    <div class="lang-zh">
+                        <p><strong>深耕中加商脉，护航华人企业全球化</strong></p>
+                        <p>作为扎根加拿大十四年的华人战略团队，我们深谙中国企业出海的核心痛点——从政策合规、文化适配到本地资源整合。凭借对中加两国商业生态的双向洞察，我们为华人企业定制跨境解决方案。从进出口贸易合规架构搭建、大宗商品跨境结算优化，到医药准入政策突破、食品标准认证加速，我们始终致力于让中国企业的北美拓展少走弯路，高效对接机遇。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-split" id="about">
+            <div class="left-col">
+                <span class="lang-zh">关于我们</span><span class="lang-en">About Us</span>
+            </div>
+            <div class="right-col">
+                <p class="lang-zh">作为一个跨境战略咨询机构，我们以“政商赋能+量化风控”双轨能力，助力中企高效开拓北美市场：位于多伦多的跨境战略咨询机构，我们由深谙加拿大政治博弈规则的华人专家团队领航——王俊彦（Joey Wong）凭借六年联邦政府核心层操盘经验（国会议员幕僚长、医疗政策倡导负责人及选区竞选经理），独创「政治资本-政策议程」转化模型；莫星莉则以跨境支付与外汇风控专长，实现客户平均25%结算成本优化。我们通过政治资本的战略配置与对冲工具的精准匹配，在合规边界内最大化您的北美市场投资回报率。</p>
+                
+                <div style="display:flex; gap:30px; margin-top:40px;">
+                    <div style="flex:1; border-top: 2px solid var(--primary-red); padding-top: 15px;">
+                        <h4 style="margin:0;">莫星莉 (Xingli Mo)</h4>
+                        <p class="lang-zh" style="font-size:0.9rem;">专注企业外汇风险管理四年，擅长「三步对冲法」，历史案例平均节省客户25%结算费用，且方案资金占用率严格控制在现金流5%以内。</p>
+                    </div>
+                    <div style="flex:1; border-top: 2px solid var(--primary-red); padding-top: 15px;">
+                        <h4 style="margin:0;">王俊彦 (Joey Wong)</h4>
+                        <p class="lang-zh" style="font-size:0.9rem;">六年联邦政府核心层操盘经验（2018-2022），现任加拿大1型糖尿病突破基金会国家政府关系负责人，精通联邦至市级监管决策链。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 5%;">
+            <div>
+                <p><strong>IGNIS Strategic Advisory</strong></p>
+                <p>© 2035 by 炳烨咨询有限公司. Toronto, Canada.</p>
+            </div>
+            <div style="text-align: right;">
+                <p>企业微信公众号 [QR]</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleLanguage() {
+            const zh = document.querySelectorAll('.lang-zh');
+            const en = document.querySelectorAll('.lang-en');
+            const isZh = zh[0].style.display !== 'none';
+            zh.forEach(el => el.style.display = isZh ? 'none' : 'block');
+            en.forEach(el => el.style.display = isZh ? 'block' : 'none');
+        }
+    </script>
+</body>
+</html>
